@@ -1,31 +1,62 @@
-interface IPsychologist {
-    cpf: string,
-    name: string, 
-    password: string,
-    address: string,
-    phone: string,
-    email: string,
-    pacients: []
-};
+interface psychologist {
+  cpf: string,
+  name: string, 
+  password: string,
+  address: string,
+  phone: string,
+  email: string,
+  pacients: []
+  CreatePacients: (newPacient: number) => boolean 
+  RemovePacients: (pacientToRemove: number) => boolean 
+  ShowPacients: () => any
+  UpdateSessionPrice: (newPrice: number) => boolean
+  SendNotification: (pacient: number) => boolean
+  UpdatePacient: (pacient: number) => boolean
+  DeletePacient: (pacient: number) => boolean
+}
 
-interface NewPsychologist {
-  InsertPacients: (newPacient: number) => number; //will return id of pacient on database
-  RemovePacients: (pacientToRemove: number) => number; //will return id of pacient on database
-};
+export class Psychologist implements psychologist {
+  cpf: string
+  name: string
+  password: string
+  address: string
+  phone: string
+  email: string
+  pacients: []
+  
+  constructor(psychologist: psychologist) {
+    this.cpf = psychologist.cpf
+    this.name = psychologist.name
+    this.password = psychologist.password
+    this.address = psychologist.address
+    this.phone = psychologist.phone
+    this.email = psychologist.email
+  }
+  CreatePacients (newPacient: number) {
+    return true
+  }
 
-export class Psychologist implements NewPsychologist {
+  RemovePacients (pacientToRemove: number) {
+    return true
+  }
 
-    dataPsychologist: IPsychologist
-    constructor(psychologist: IPsychologist) {
-      this.dataPsychologist.cpf = psychologist.cpf;
-      this.dataPsychologist.name = psychologist.name;
-      this.dataPsychologist.password = psychologist.password;
-      this.dataPsychologist.address = psychologist.address;
-      this.dataPsychologist.phone = psychologist.phone;
-      this.dataPsychologist.email = psychologist.email;
-      this.dataPsychologist.pacients = psychologist.pacients;
-    };
+  UpdatePacient (pacient: number) {
+    return true
+  }
 
-    InsertPacients: (newPacient: number) => number; 
-    RemovePacients: (pacientToRemove: number) => number;
-};
+  DeletePacient (pacient: number){
+    return true
+  }
+
+  ShowPacients () {
+    return []
+  }
+
+  UpdateSessionPrice (newPrice: number) {
+    return true
+  }
+
+  SendNotification (pacient: number) {
+    return true
+  }
+}

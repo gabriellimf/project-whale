@@ -1,35 +1,45 @@
-interface IPacient {
-    cpf: string,
-    name: string, 
-    password: string,
-    address: string,
-    phone: string,
-    email: string,
-    sessionPrice: number,
-    monthly: boolean,
-    discount: number
-};
+interface pacient {
+  cpf: string,
+  name: string, 
+  password: string,
+  address: string,
+  phone: string,
+  email: string,
+  sessionPrice: number,
+  monthly: boolean,
+  discount: number
+  ShowPayments: () => number
+  SignDocuments: () => void
+}
 
-interface NewPacient {
-  UpdateSessionPrice: (newPrice: number) => number; 
-};
+export class Pacient implements pacient {
+  cpf: string
+  name: string 
+  password: string
+  address: string
+  phone: string
+  email: string
+  sessionPrice: number
+  monthly: boolean
+  discount: number
+  
+  constructor(pacient: pacient) {
+    this.cpf = pacient.cpf
+    this.name = pacient.name
+    this.password = pacient.password
+    this.address = pacient.address
+    this.phone = pacient.phone
+    this.email = pacient.email
+    this.sessionPrice = pacient.sessionPrice
+    this.monthly = pacient.monthly
+    this.discount = pacient.discount
+  }
 
-export class Pacient implements NewPacient {
-    dataPacient: IPacient
-    constructor(pacient: IPacient) {
-      this.dataPacient.cpf = pacient.cpf;
-      this.dataPacient.name = pacient.name;
-      this.dataPacient.password = pacient.password;
-      this.dataPacient.address = pacient.address;
-      this.dataPacient.phone = pacient.phone;
-      this.dataPacient.email = pacient.email;
-      this.dataPacient.sessionPrice = pacient.sessionPrice;
-      this.dataPacient.monthly = pacient.monthly;
-      this.dataPacient.discount = pacient.discount;
-    };
+  ShowPayments () {
+    return 0;
+  }
 
-    UpdateSessionPrice: (newPrice: number) => number;
-};
+  SignDocuments () {
 
-
-
+  }
+}

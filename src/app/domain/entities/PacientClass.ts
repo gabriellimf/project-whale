@@ -30,3 +30,5 @@ export class Pacient implements NewPacient {
 
     UpdateSessionPrice: (newPrice: number) => number;
 };
+
+

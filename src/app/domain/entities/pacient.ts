@@ -32,3 +32,4 @@ export class Pacient implements NewPacient {
 };
 
 
+

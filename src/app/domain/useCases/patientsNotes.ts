@@ -1,24 +1,24 @@
 interface notesAboutpatients {
-  AddNotes: (patient: number) => void;
-  ListNotes: (patient: number) => any;
-  DeleteNotes: (patient: number) => boolean;
-  updateNotes: (patient: number) => boolean;
+  Add: (patient: number) => void;
+  List: (patient: number) => any;
+  Delete: (patient: number) => boolean;
+  update: (patient: number) => boolean;
 }
 
 export class NotesAboutpatients {
-  AddNotes(patient: number) {
+  Add(patient: number) {
     return;
   }
 
-  ListNotes(patient: number) {
+  List(patient: number) {
     return;
   }
 
-  DeleteNotes(patient: number) {
+  Delete(patient: number) {
     return true;
   }
 
-  UpdateNotes(patient: number) {
+  Update(patient: number) {
     return true;
   }
 }

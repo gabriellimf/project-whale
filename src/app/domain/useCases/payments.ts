@@ -1,24 +1,24 @@
 interface payments {
-  AddNewPayment: (pacient: number) => boolean;
-  EditNewPayment: (pacient: number) => boolean;
-  DeleteNewPayment: (pacient: number) => boolean;
-  ListAllPayments: (pacient: number) => any;
+  AddNew: (pacient: number) => boolean;
+  Edit: (pacient: number) => boolean;
+  Delete: (pacient: number) => boolean;
+  ListAll: (pacient: number) => any;
 }
 
 export class Payments {
-  AddNewPayment(pacient: number) {
+  AddNew(pacient: number) {
     return true;
   }
 
-  EditNewPayment(pacient: number) {
+  Edit(pacient: number) {
     return true;
   }
 
-  DeleteNewPayment(pacient: number) {
+  Delete(pacient: number) {
     return true;
   }
 
-  ListAllPayments(pacient: number) {
+  ListAll(pacient: number) {
     return;
   }
 }

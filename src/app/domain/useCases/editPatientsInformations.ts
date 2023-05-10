@@ -1,20 +1,20 @@
 interface editpatients {
-  SearchpatientByCPF: (cpfCNPJ: string) => number
-  UpdateDatapatient: (patient: number) => boolean
-  Deletepatient: (patient: number) => boolean
+  SearchByCPF: (cpfCNPJ: string) => number
+  UpdateData: (patient: number) => boolean
+  Delete: (patient: number) => boolean
   UpdateSessionPrice: (patient: number, newPrice: number) => boolean
 }
 
 export class Editpatients {
-  SearchpatientByCPF (patient: number){
+  SearchByCPF (patient: number){
       return 0
   } 
 
-  Updatepatient (patient: number) {
+  UpdateData (patient: number) {
       return true
   }
 
-  Deletepatient (patient: number) {
+  Delete (patient: number) {
       return true
   }
 

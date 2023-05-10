@@ -12,7 +12,7 @@
 }
 
 //JSON CLIENTE
-const objPacient: any = {
+const objpatient: any = {
   "token": "adasdasdas",
   "data": {
     "cpfCnpj": "string",
@@ -43,9 +43,8 @@ const objPacient: any = {
   }
 
   CPFValidation (cpf: string) {
-    if (/* cpf já existe */) {
-      
-    }
+    let cpfExistente = cpf
+    /*Funcao de busca do banco de dados para inserir todos os cpf já cadastrados*/ 
     
     return true
 
@@ -57,4 +56,4 @@ const objPacient: any = {
 } 
 
 const singUp = new SingUp()
-singUp.TokenValidation(objPacient.token)
+singUp.TokenValidation(objpatient.token)
